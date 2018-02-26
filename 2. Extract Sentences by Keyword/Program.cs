@@ -15,11 +15,11 @@ namespace _2.Extract_Sentences_by_Keyword
 
             string[] input = Console.ReadLine().Split(new char[] { '!', '.', '?' },
                 StringSplitOptions.RemoveEmptyEntries);
-            string pattern = @"[^A-Za-z]";
-            foreach (string item in input)
+            string pattern =$@"\b{word}\b";
+            foreach (var  item in input)
             {
-                string[] words = Regex.Split(item, pattern);
-                if (input.Contains(word))
+               // string[] words = Regex.Split(item, pattern);
+                if (Regex.IsMatch(item,pattern))
                 {
                     Console.WriteLine(item.Trim());
                 }

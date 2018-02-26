@@ -11,7 +11,8 @@ namespace _1.Extract_Emails1
     {
         static void Main(string[] args)
         {
-            string pattern = @"((?<=\s)[a-zA-Z0-9]+([-.]\w*)*@[a-zA-Z]+?([.-][a-zA-Z]*)*(\.[a-z]{2,}))"; 
+            string pattern = @"((?<=\s)[a-zA-Z0-9]+([-.]\w*)
+                           *@[a-zA-Z]+?([.-][a-zA-Z]*)*(\.[a-z]{2,}))"; 
             string input = Console.ReadLine();
 
             foreach (Match m in Regex.Matches(input, pattern))
