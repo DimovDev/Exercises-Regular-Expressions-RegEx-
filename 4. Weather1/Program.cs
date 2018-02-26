@@ -10,6 +10,9 @@ namespace _4.Weather1
     {
         static void Main(string[] args)
         {
+            string pattern = @"([A-Z]{2})(\d+).(\d{1,2})([a-zA-Z]+)\|";
+            string input = Console.ReadLine();
+            List<string> lines = new List<string>();
         }
     }
 }
